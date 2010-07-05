@@ -8,6 +8,7 @@ our $VERSION = '0.01';
 sub load {
     my ($class, $klass) = @_;
 
+    # for global $SIG{ALRM}
     $SIG{ALRM} = sub {
         die 'force quit job...';
     };
